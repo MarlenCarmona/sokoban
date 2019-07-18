@@ -2,8 +2,8 @@
 mapa=[
 [2,2,2,2,2],
 [2,4,4,4,2],
-[2,4,4,4,2],
-[2,4,4,0,2],
+[2,4,1,4,2],
+[2,3,4,0,2],
 [2,2,2,2,2]]
 
 #Metodo para imprimir el mapa
@@ -380,5 +380,12 @@ while True:
         elif mapa[monoX+1][monoY]==5 and mapa[monoX+2][monoY]==2:
             print("No puedes atravesar los muros... aún ;)")
 
+
     else:
         print ("Oprimiste la tecla equivocada")
+
+#Comprobación para terminar el nivel
+    if mapa[0].count(1)==0 and mapa[1].count(1)==0 and mapa[2].count(1)==0 and mapa[3].count(1)==0 and mapa[4].count(1)==0:
+        print("Nivel completado")
+        break
+        
